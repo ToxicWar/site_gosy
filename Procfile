@@ -1,1 +1,1 @@
-web: gunicorn site_gosy.wsgi --log-file -
+web: gunicorn site_gosy.wsgi
