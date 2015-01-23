@@ -1,0 +1,16 @@
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.*~
+*.kpf
+*.*project*
+*.settings
+.idea
+.DS_Store
+.coverage
+*.db
+*.egg-info
+venv
+*.pyc
+staticfiles
