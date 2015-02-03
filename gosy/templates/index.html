@@ -5,6 +5,13 @@
   <title>Home</title>
 </head>
 <body>
-  Home
+  <ul>
+  {% for item in object_list %}
+    <li>
+      <h1>{{ item.question }}</h1><br>
+      <p>{{ item.answer|safe }}</p>
+    </li>
+  {% endfor %}
+  </ul>
 </body>
 </html>
