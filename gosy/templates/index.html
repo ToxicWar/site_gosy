@@ -8,8 +8,7 @@
   <ul>
   {% for item in object_list %}
     <li>
-      <h1>{{ item.question }}</h1><br>
-      <p>{{ item.answer|safe }}</p>
+      <a href="{% url 'ItemDetail' pk=item.pk %}"><h1>{{ item.question }}</h1></a><br>
     </li>
   {% endfor %}
   </ul>

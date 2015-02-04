@@ -4,8 +4,8 @@ from django.conf import settings
 from django.contrib import admin
 
 urlpatterns = patterns('',
-    url(r'^$', include('gosy.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^', include('gosy.urls')),
 )
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
