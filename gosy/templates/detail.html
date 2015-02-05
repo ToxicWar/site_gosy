@@ -4,17 +4,25 @@
   <meta charset="UTF-8">
   <title>Ответ</title>
   <script src="/static/scripts/main.js"></script>
-  <link rel="stylesheet" href="/static/css/style.css" type="text/css" />
+  <link rel="stylesheet" href="/static/css/main.css" type="text/css" />
 </head>
 <div class="header">
-	<div class="logo">ГОСЫ 2015</div><div class="site_descr">Быстрый способ найти ответ на вопрос</div>
+	<div class="logo"><a href="/">ГОСЫ 2015</a></div><div class="site_descr">Быстрый способ найти ответ на вопрос</div>
 </div>
 <body>
+<div class="content">
   <ul style="list-style: none;">
-    <li>
+    <li class="tile">
       <h1>{{ object.question }}</h1><br>
       <div>{{ object.answer|safe }}</div>
     </li>
   </ul>
+</div>
+<div class="footer">
+	<div>
+	Паша и Антоша 2015
+	</div>
+</div>
+
 </body>
 </html>

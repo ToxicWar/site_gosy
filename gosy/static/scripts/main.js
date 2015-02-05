@@ -16,21 +16,25 @@ core={
 	search:function(){
 		var request = req.value.toLowerCase()
 		if(request=='') return false
-		out.innerHTML=''
-		for(var i=0; i<names.length; i++){
-			if(names[i].toLowerCase().indexOf(request)+1){
-				var xhr = new XMLHttpRequest();
-				xhr.onload = function(){
-					core.db = JSON.parse(this.responseText)
-					core.showTiles()
-				}
-				xhr.open('GET', "http://3bl3gamer.no-ip.org/wismt/scripts/"+i+".json", true);
-				xhr.send(null);
+		
+		var tiles = document.getElementsByClassName('tile')
+		for(var i=0; i<tiles.length; i++){
+			if(!(tiles[i].innerText.toLowerCase().indexOf(request)+1)){
+				tiles[i].classList.add('hidden')
+				tiles[i].classList.remove('visible')
+			}else{
+				tiles[i].classList.remove('hidden')
+				tiles[i].classList.add('visible')
 			}
 		}
-
+	},
 	clearInput: function(){
 		req.value=''
+		var tiles = document.getElementsByClassName('tile')
+		for(var i=0; i<tiles.length; i++){
+			tiles[i].classList.remove('hidden')
+			tiles[i].classList.add('visible')
+		}
 	}
 }
 
