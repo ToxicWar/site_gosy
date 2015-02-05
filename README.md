@@ -1,2 +1,2 @@
 # site_gosy
-Site for GOS exam :sparkles:
+Site for GOS exam :sparkles::sparkles:
