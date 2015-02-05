@@ -2,13 +2,18 @@
 <html>
 <head lang="en">
   <meta charset="UTF-8">
-  <title>Detail</title>
+  <title>Ответ</title>
+  <script src="/static/scripts/main.js"></script>
+  <link rel="stylesheet" href="/static/css/style.css" type="text/css" />
 </head>
+<div class="header">
+	<div class="logo">ГОСЫ 2015</div><div class="site_descr">Быстрый способ найти ответ на вопрос</div>
+</div>
 <body>
-  <ul>
+  <ul style="list-style: none;">
     <li>
       <h1>{{ object.question }}</h1><br>
-      <p>{{ object.answer|safe }}</p>
+      <div>{{ object.answer|safe }}</div>
     </li>
   </ul>
 </body>

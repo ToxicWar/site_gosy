@@ -2,17 +2,32 @@
 <html>
 <head lang="en">
   <meta charset="UTF-8">
-  <title>Home</title>
+  <title>ГОСЫ 2015</title>
   <script src="/static/scripts/main.js"></script>
   <link rel="stylesheet" href="/static/css/style.css" type="text/css" />
 </head>
 <body>
-  <ul>
+<div class="header">
+<div class="logo">ГОСЫ 2015</div><div class="site_descr">Быстрый способ найти ответ на вопрос</div>
+	<div class="search">
+		<form id="search_form" onsubmit="return false">
+			<div class="search_wrap">
+				<input class="wismt_input" type="text" placeholder="Вопрос или часть вопроса" id="req">
+				<div class="wismt_clear" id="input_clear" onclick="core.clearInput()"><p>×</p></div>
+			</div>
+			<input class="wismt_submit" type="submit" id="submit" onclick="core.search()" value="Искать">
+		</form>
+	</div>
+</div>
+<div class="content">
+  <ul style="list-style: none;">
   {% for item in object_list %}
-    <li>
+    <li class="tile">
       <a href="{% url 'ItemDetail' pk=item.pk %}"><h1>{{ item.question }}</h1></a><br>
     </li>
   {% endfor %}
   </ul>
+</div>
+
 </body>
 </html>

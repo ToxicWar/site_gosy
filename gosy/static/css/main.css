@@ -25,9 +25,11 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+/*
 ol, ul {
 	list-style: none;
 }
+*/
 blockquote, q {
 	quotes: none;
 }
@@ -226,12 +228,15 @@ input[type=search] {
 
 
 body{
-font-family: 'Helvetica', sans-serif;
+	font-family: 'Helvetica', sans-serif;
+	background: background: rgb(236, 236, 236);
 }
 
 /*                                header*/
 .header{
 	padding: 25px;
+	background: url('http://i.imgur.com/OaalLwH.png');
+	border-bottom: 1px solid lightgrey;
 }
 .header>*{
 	max-width: 850px;
@@ -244,6 +249,7 @@ font-family: 'Helvetica', sans-serif;
 }
 .site_descr{
 	padding-left: 15px;
+	color: white;
 }
 .search{
 	padding: 25px 0px;
@@ -296,87 +302,43 @@ font-family: 'Helvetica', sans-serif;
 	padding: 0 50px;
 	height: 40px;
 	width: 159px!important;
-	background: rgb(245, 245, 163);
+	background: rgb(71, 169, 219);
 	border-radius: 5px;
 	font-size: 14px;
 	transition: background .1s;
 	font-weight: bold;
 }
 .wismt_submit:hover{
-	background: lightgrey;
+	background: rgb(126, 198, 236);
 }
 .wismt_submit:active{
-	background: lightgrey;
+	background: rgb(126, 198, 236);
 }
 /*                                content*/
 .content{
 	overflow: hidden;
 }
-.daySeparator{
-	float: left;
-	width: 100%;
-	line-height: 50px;
-	background: rgb(71, 169, 219);
-	font-weight: bold;
-	color: white;
-	padding-left: 40px;
-}
 .tile{
-	margin: 20px;
 	padding: 15px;
-	background: rgb(205, 226, 232);
 	border-radius: 5px;
-	float: left;
+	margin: 20px 0px;
+	border: 1px solid lightgrey;
+	background: white;
 }
-#out>div:before,
-#out>div:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+.tile h1{
+	font-size: 18px;
+}
+a {
+	text-decoration: none;
 }
 
-#out>div:after {
-    clear: both;
-}
-.time{
-	font-weight: bold;
-	font-size: 24px;
-	padding-bottom: 15px;
-}
-.time:empty{
-	display: none;
-}
-.group{
-	padding-bottom: 10px;
-}
 /*                                footer*/
 .footer>div{
 	text-align: center;
 	color: grey;
 	padding: 30px;
 }
-/*                                status bar*/
-.statusBar{
-	width: 90%;
-	height: 50px;
-	border-radius: 5px;
-	border: 1px solid grey;
-	margin: 10px auto;
-	position: relative;
-	overflow: hidden;
-}
-#sb_fill{
-	position: absolute;
-	top: 0;
-	left: -100%;
-	height: 100%;
-	width: 100%;
-	background: lightgrey;
-	transition: left 0.5s linear;
-	box-sizing: border-box;
-	padding-right: 10px;
-	line-height: 50px;
-	text-align: right;
-}
+
 
 
 @media (min-width: 0px) and (max-width: 760px) {
@@ -387,12 +349,6 @@ body{
 	margin: 0 25px;
 	background: rgb(236, 236, 236);
 	margin-top: 25px;
-}
-.tile{
-	margin: 20px 0px!important;
-	float: none;
-	border: 1px solid lightgrey;
-	background: white;
 }
 .tile_content{
 
@@ -407,12 +363,6 @@ body{
 	background: rgb(92, 139, 165);
 	border: 1px solid lightgrey;
 	line-height: normal;
-}
-.header{
-	background: url('../img/b1.jpg');
-	color: white;
-	padding-bottom: 0px;
-	border-bottom: 1px solid lightgrey;
 }
 .logo{
 	color: white;
