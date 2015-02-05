@@ -235,7 +235,14 @@ body{
 /*                                header*/
 .header{
 	padding: 25px;
-	background: url('http://i.imgur.com/OaalLwH.png');
+	background: rgb(33,38,70);
+	background: -moz-linear-gradient(left,  rgba(33,38,70,1) 0%, rgba(35,65,91,1) 19%, rgba(64,171,155,1) 77%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(33,38,70,1)), color-stop(19%,rgba(35,65,91,1)), color-stop(77%,rgba(64,171,155,1)));
+	background: -webkit-linear-gradient(left,  rgba(33,38,70,1) 0%,rgba(35,65,91,1) 19%,rgba(64,171,155,1) 77%);
+	background: -o-linear-gradient(left,  rgba(33,38,70,1) 0%,rgba(35,65,91,1) 19%,rgba(64,171,155,1) 77%);
+	background: -ms-linear-gradient(left,  rgba(33,38,70,1) 0%,rgba(35,65,91,1) 19%,rgba(64,171,155,1) 77%);
+	background: linear-gradient(to right,  rgba(33,38,70,1) 0%,rgba(35,65,91,1) 19%,rgba(64,171,155,1) 77%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#212646', endColorstr='#40ab9b',GradientType=1 );
 	border-bottom: 1px solid lightgrey;
 }
 .header>*{

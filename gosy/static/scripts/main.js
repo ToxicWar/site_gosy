@@ -5,9 +5,17 @@ document.onreadystatechange = function () {
     }
 }
 function init(){
-
+	var imgs = document.getElementsByTagName('img')
+	for(var i=0; i<imgs.length; i++){
+		var link = document.createElement('a')
+		link.innerHTML = 'Ссылка на хайрез картинки'
+		link.setAttribute('href', imgs[i].getAttribute('src'))
+		insertAfter(link, imgs[i])
+	}
 }
-
+function insertAfter(newNode, referenceNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
 
 
 
