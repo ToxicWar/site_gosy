@@ -1,0 +1,446 @@
+/*                 CSS Reset                   */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------
+
+Super Form Reset
+
+A couple of things to watch out for:
+
+- IE8: If a text input doesn't have padding on all sides or none the text won't be centered.
+- The default border sizes on text inputs in all UAs seem to be slightly different. You're better off using custom borders.
+- You NEED to set the font-size and family on all form elements
+- Search inputs need to have their appearance reset and the box-sizing set to content-box to match other UAs
+- You can style the upload button in webkit using ::-webkit-file-upload-button
+- ::-webkit-file-upload-button selectors can't be used in the same selector as normal ones. FF and IE freak out.
+- IE: You don't need to fake inline-block with labels and form controls in IE. They function as inline-block.
+- By turning off ::-webkit-search-decoration, it removes the extra whitespace on the left on search inputs
+
+----------------------------------------------------------------------------------------------------*/
+ 
+input,
+label,
+select,
+button,
+textarea
+{
+	margin:0;
+	border:0;
+	padding:0;
+	display:inline-block;
+	vertical-align:middle;
+	white-space:normal;
+	background:none;
+	line-height:1;
+	
+	/* Browsers have different default form fonts */
+	font-size:13px;
+	font-family:Arial;
+}
+ 
+/* Remove the stupid outer glow in Webkit */
+input:focus
+{
+	outline:0;
+}
+ 
+/* Box Sizing Reset
+-----------------------------------------------*/
+ 
+/* All of our custom controls should be what we expect them to be */
+input,
+textarea
+{
+	-webkit-box-sizing:content-box;
+	-moz-box-sizing:content-box;
+	box-sizing:content-box;
+}
+ 
+/* These elements are usually rendered a certain way by the browser */
+button,
+input[type=reset],
+input[type=button],
+input[type=submit],
+input[type=checkbox],
+input[type=radio],
+select
+{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+ 
+/* Text Inputs
+-----------------------------------------------*/
+ 
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=range],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week]
+{
+}
+ 
+/* Button Controls
+-----------------------------------------------*/
+ 
+input[type=checkbox],
+input[type=radio]
+{
+	width:13px;
+	height:13px;
+}
+ 
+/* File Uploads
+-----------------------------------------------*/
+ 
+input[type=file]
+{
+ 
+}
+ 
+/* Search Input
+-----------------------------------------------*/
+ 
+/* Make webkit render the search input like a normal text field */
+input[type=search]
+{
+	-webkit-appearance:textfield;
+	-webkit-box-sizing:content-box;
+}
+ 
+/* Turn off the recent search for webkit. It adds about 15px padding on the left */
+::-webkit-search-decoration
+{
+	display:none;
+}
+ 
+/* Buttons
+-----------------------------------------------*/
+ 
+button,
+input[type="reset"],
+input[type="button"],
+input[type="submit"]
+{
+	/* Fix IE7 display bug */
+	overflow:visible;
+	width:auto;
+}
+ 
+/* IE8 and FF freak out if this rule is within another selector */
+::-webkit-file-upload-button
+{	
+	padding:0;
+	border:0;
+	background:none;
+}
+ 
+/* Textarea
+-----------------------------------------------*/
+ 
+textarea 
+{
+	/* Move the label to the top */
+	vertical-align:top;
+	
+	/* Turn off scroll bars in IE unless needed */
+	overflow:auto;
+}
+ 
+/* Selects
+-----------------------------------------------*/
+ 
+select
+{
+ 
+}
+ 
+select[multiple] 
+{
+	/* Move the label to the top */
+	vertical-align:top;
+}
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+input[type=search] {
+  -webkit-appearance:textfield;
+  -webkit-box-sizing:content-box;
+}
+
+/*                 global                   */
+
+
+body{
+font-family: 'Helvetica', sans-serif;
+}
+
+/*                                header*/
+.header{
+	padding: 25px;
+}
+.header>*{
+	max-width: 850px;
+}
+.logo{
+	font-size: 64px;
+	padding-bottom: 15px;
+	color: rgb(71, 169, 219);
+	padding-left: 15px;
+}
+.site_descr{
+	padding-left: 15px;
+}
+.search{
+	padding: 25px 0px;
+	color: black
+}
+.search_wrap{
+	position: relative;
+	height: 50px;
+	border: 1px solid rgb(71, 169, 219);
+	border-radius: 5px;
+	overflow: hidden;
+}
+.wismt_input{
+	padding: 10px;
+	padding-left: 15px;
+	box-sizing: border-box;
+	font-size: 16px;
+	width: 100%;
+	background-color: white!important;
+}
+.wismt_input, .wismt_clear{
+	height: 100%;
+}
+.wismt_clear{
+	display: table;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50px;
+	float: right;
+	border-left: 1px solid rgb(71, 169, 219);
+	background: white;
+}
+.wismt_clear>p{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 41px;
+	transition: all .1s;
+}
+.wismt_clear:hover{
+	background: lightgrey;
+}
+.wismt_clear:active>p{
+	transform: rotate(90deg);
+}
+.wismt_submit{
+	margin: 15px auto;
+	display: block;
+	padding: 0 50px;
+	height: 40px;
+	width: 159px!important;
+	background: rgb(245, 245, 163);
+	border-radius: 5px;
+	font-size: 14px;
+	transition: background .1s;
+	font-weight: bold;
+}
+.wismt_submit:hover{
+	background: lightgrey;
+}
+.wismt_submit:active{
+	background: lightgrey;
+}
+/*                                content*/
+.content{
+	overflow: hidden;
+}
+.daySeparator{
+	float: left;
+	width: 100%;
+	line-height: 50px;
+	background: rgb(71, 169, 219);
+	font-weight: bold;
+	color: white;
+	padding-left: 40px;
+}
+.tile{
+	margin: 20px;
+	padding: 15px;
+	background: rgb(205, 226, 232);
+	border-radius: 5px;
+	float: left;
+}
+#out>div:before,
+#out>div:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+#out>div:after {
+    clear: both;
+}
+.time{
+	font-weight: bold;
+	font-size: 24px;
+	padding-bottom: 15px;
+}
+.time:empty{
+	display: none;
+}
+.group{
+	padding-bottom: 10px;
+}
+/*                                footer*/
+.footer>div{
+	text-align: center;
+	color: grey;
+	padding: 30px;
+}
+/*                                status bar*/
+.statusBar{
+	width: 90%;
+	height: 50px;
+	border-radius: 5px;
+	border: 1px solid grey;
+	margin: 10px auto;
+	position: relative;
+	overflow: hidden;
+}
+#sb_fill{
+	position: absolute;
+	top: 0;
+	left: -100%;
+	height: 100%;
+	width: 100%;
+	background: lightgrey;
+	transition: left 0.5s linear;
+	box-sizing: border-box;
+	padding-right: 10px;
+	line-height: 50px;
+	text-align: right;
+}
+
+
+@media (min-width: 0px) and (max-width: 760px) {
+body{
+	background: rgb(236, 236, 236);
+}
+.content{
+	margin: 0 25px;
+	background: rgb(236, 236, 236);
+	margin-top: 25px;
+}
+.tile{
+	margin: 20px 0px!important;
+	float: none;
+	border: 1px solid lightgrey;
+	background: white;
+}
+.tile_content{
+
+}
+.daySeparator{
+	padding: 15px;
+	background: rgb(19, 91, 128);
+	width: 129px!important;
+	float: none;
+	color: white;
+	font-weight: bold;
+	background: rgb(92, 139, 165);
+	border: 1px solid lightgrey;
+	line-height: normal;
+}
+.header{
+	background: url('../img/b1.jpg');
+	color: white;
+	padding-bottom: 0px;
+	border-bottom: 1px solid lightgrey;
+}
+.logo{
+	color: white;
+	padding-top: 40px;
+	padding-left: 15px;
+}
+.site_descr{
+	padding-left: 15px;
+}
+.wismt_submit{
+	background: rgb(255, 255, 255);
+	margin-top: 25px;
+	margin-bottom: 0px;
+	border: 1px solid rgb(71, 169, 219);
+}
+}
+/*                 utils                    */
+.f_l{
+	float:left;
+}
+.f_r{
+	float:right;
+}
+.hidden{
+	display:none;
+}
+.visible{
+	display:block;
+}
+
+
