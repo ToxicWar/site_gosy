@@ -5,12 +5,14 @@
   <title>ГОСЫ 2015</title>
   <script src="/static/scripts/main.js"></script>
   <link rel="stylesheet" href="/static/css/main.css" type="text/css" />
+  <meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 <body>
 <div class="header">
 <div class="logo"><a href="/">ГОСЫ 2015</a></div><div class="site_descr">Быстрый способ найти ответ на вопрос</div>
 	<div class="search">
 		<form id="search_form" onsubmit="return false">
+		<a id="searchAnchor"></a>
 			<div class="search_wrap">
 				<input class="wismt_input" type="text" placeholder="Вопрос или часть вопроса" id="req">
 				<div class="wismt_clear" id="input_clear" onclick="core.clearInput()"><p>×</p></div>
