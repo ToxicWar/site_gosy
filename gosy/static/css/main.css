@@ -271,13 +271,14 @@ body{
 	border: 1px solid rgb(71, 169, 219);
 	border-radius: 5px;
 	overflow: hidden;
+	background: white;
 }
 .wismt_input{
 	padding: 10px;
 	padding-left: 15px;
 	box-sizing: border-box;
 	font-size: 16px;
-	width: 100%;
+	width: 84%;
 	background-color: white!important;
 }
 .wismt_input, .wismt_clear{

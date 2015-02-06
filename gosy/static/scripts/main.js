@@ -23,11 +23,15 @@ function insertAfter(newNode, referenceNode) {
 core={
 	search:function(){
 		var request = req.value.toLowerCase()
-		if(request=='') return false
+		if(request==''){
+			core.clearInput()
+			return
+		}
 		scrollTo(0,getOffset(searchAnchor).top)
 		var tiles = document.getElementsByClassName('tile')
 		for(var i=0; i<tiles.length; i++){
-			if(!(tiles[i].innerText.toLowerCase().indexOf(request)+1)){
+			var text = tiles[i].textContent.toLowerCase() || tiles[i].innerText.toLowerCase()
+			if(!(text.indexOf(request)+1)){
 				tiles[i].classList.add('hidden')
 				tiles[i].classList.remove('visible')
 			}else{
